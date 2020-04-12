@@ -60,4 +60,32 @@ Windows
 
 # 5、winodow相关工具
 
-# 6
+# 6, git error
+ssh: connect to host github.com port 22: Connection refused
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+vim ~/.ssh/config
+
+#github
+#Host github.com
+#HostName github.com
+#PreferredAuthentications publickey
+#IdentityFile ~/.ssh/id_rsa_github
+
+#github-new
+Host github.com
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_github
+Port 443
+
+#gitee
+Host gitee.com
+HostName gitee.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_gitee
+
+ssh -T git@github.com and ok
