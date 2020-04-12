@@ -11,9 +11,9 @@
 	"rack_rs485count":1,
 	"rack_ethspeed":1,
 	"rack_chanList": [{
-		"chan_index": 1,
+		"chan_index": 0,
 		"chan_nodeList": [{
-			"node_index": 1,
+			"node_index": 0,
 			"node_featureflag": 1,
 			"node_firmwarever":1,
 			"node_hardwarever":1,
@@ -21,41 +21,41 @@
 			"node_chip":1,
 			"node_peripheral":1,
 			"node_confsize":1,
-			"node_samplingrata":1,
+			"node_samplingrata":5,
 			"node_weighingrange":1
 		}, {
-			"node_index": 2,
+			"node_index": 1,
 			"node_featureflag": 1,
 			"node_firmwarever":1,
 			"node_hardwarever":1,
 			"node_hwid":1,
 			"node_chip":1,
-			"node_peripheral":1,
+			"node_peripheral":4,
 			"node_confsize":1,
 			"node_samplingrata":1,
 			"node_weighingrange":1
 		}]
 	}, {
-		"chan_index": 2,
+		"chan_index": 1,
 		"chan_nodeList": [{
+			"node_index": 0,
+			"node_featureflag": 1,
+			"node_firmwarever":1,
+			"node_hardwarever":1,
+			"node_hwid":1,
+			"node_chip":1,
+			"node_peripheral":6,
+			"node_confsize":1,
+			"node_samplingrata":1,
+			"node_weighingrange":1
+		}, {
 			"node_index": 1,
 			"node_featureflag": 1,
 			"node_firmwarever":1,
 			"node_hardwarever":1,
 			"node_hwid":1,
 			"node_chip":1,
-			"node_peripheral":1,
-			"node_confsize":1,
-			"node_samplingrata":1,
-			"node_weighingrange":1
-		}, {
-			"node_index": 2,
-			"node_featureflag": 1,
-			"node_firmwarever":1,
-			"node_hardwarever":1,
-			"node_hwid":1,
-			"node_chip":1,
-			"node_peripheral":1,
+			"node_peripheral":11,
 			"node_confsize":1,
 			"node_samplingrata":1,
 			"node_weighingrange":1
