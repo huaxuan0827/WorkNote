@@ -8,9 +8,9 @@ https://gitforwindows.org/ 下载的，但是没有.ssh目录，一顿操作之�
 # 3、window10 配置 gitee和github
 
 Github、Gitee同时配置SSH
-1. 进入ssh目录
+## 1. 进入ssh目录
 cd ~/.ssh
-2. 使用命令分别创建两个平台的公钥
+## 2. 使用命令分别创建两个平台的公钥
 ssh-keyen -t rsa -C "xxxxxx@xxx.com" -f "id_rsa_gitee"
 ssh-keyen -t rsa -C "xxxxxx@xxx.com" -f "id_rsa_github"
 完成后，目录内容如下：
@@ -19,8 +19,8 @@ ssh-keyen -t rsa -C "xxxxxx@xxx.com" -f "id_rsa_github"
 -rw------- 1 lambda lambda 1679 Apr  1 13:44 id_rsa_github
 -rw-r--r-- 1 lambda lambda  399 Apr  1 13:44 id_rsa_github.pub
 -rw-r--r-- 1 lambda lambda 2434 Jun 14 11:05 known_hosts
-3. 将产生的公钥xxx.pub内容分别配置到Github和Gitee。
-4. 创建config文件，解决SSH冲突
+## 3. 将产生的公钥xxx.pub内容分别配置到Github和Gitee。
+## 4. 创建config文件，解决SSH冲突
 在.ssh目录下创建config文件，添加如下内容：
 #github
 Host github.com
@@ -34,7 +34,7 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_gitee
 
 
-5. 测试
+## 5. 测试
 命令：
 ssh -T git@gitee.com
 #或
@@ -42,7 +42,7 @@ ssh -T git@github.com
 成功：
 Hi xxxx! You've successfully authenticated, but GITEE.COM does not provide shell access.
 
-6. 遇到问题
+## 6. 遇到问题
 在测试环节，有时会出现如下错误：
 #Linux
 Bad owner or permissions on /home/lambda/.ssh/config
@@ -61,7 +61,8 @@ Windows
 
 # 5、winodow相关工具
 
-# 6, git error 不能连接22端口 换一个端口
+# 6, git error
+## 1，不能连接22端口 换一个端口
 ssh: connect to host github.com port 22: Connection refused
 fatal: Could not read from remote repository.
 
@@ -91,7 +92,7 @@ IdentityFile ~/.ssh/id_rsa_gitee
 
 ssh -T git@github.com and ok
 
-7, git clone时出现Permission denied (public key)问题解决
+## 2, git clone时出现Permission denied (public key)问题解决
 ssh -T -v git@github.com 可以调试连接过程；
 debug1: Authentications that can continue: publickey
 debug1: Next authentication method: publickey
