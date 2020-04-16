@@ -61,7 +61,7 @@ Windows
 
 # 5、winodow相关工具
 
-# 6, git error
+# 6、git error
 ## 1，不能连接22端口 换一个端口
 ssh: connect to host github.com port 22: Connection refused
 fatal: Could not read from remote repository.
