@@ -107,3 +107,5 @@ debug1: No more authentication methods to try.
 git@github.com: Permission denied (publickey).
 试了一通之后还是不行，最后发现config配置文件 搞成 config.txt了
 ssh-add -l #命令查看密钥列表，好像没有用耶，好像是没有启用代理，有时间再研究吧！
+
+## 3，为什么浏览页面这么丑，换行符没有弄好，有时间研究下。
