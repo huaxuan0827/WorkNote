@@ -42,7 +42,7 @@ ssh -T git@github.com
 成功：
 Hi xxxx! You've successfully authenticated, but GITEE.COM does not provide shell access.
 
-## 6. 遇到问题
+## 6、 遇到问题
 在测试环节，有时会出现如下错误：
 #Linux
 Bad owner or permissions on /home/lambda/.ssh/config
