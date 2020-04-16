@@ -1,6 +1,7 @@
 git开发环境搭建
 
 # 1、window10 git安装
+https://gitforwindows.org/ 下载的，但是没有.ssh目录，一顿操作之后又有了，奇怪哟西。
 
 # 2、linux-ubuntu64 git安装
 
@@ -60,7 +61,7 @@ Windows
 
 # 5、winodow相关工具
 
-# 6, git error
+# 6, git error 不能连接22端口 换一个端口
 ssh: connect to host github.com port 22: Connection refused
 fatal: Could not read from remote repository.
 
@@ -89,3 +90,19 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_gitee
 
 ssh -T git@github.com and ok
+
+7, git clone时出现Permission denied (public key)问题解决
+ssh -T -v git@github.com 可以调试连接过程；
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /c/Users/86187/.ssh/id_rsa
+debug1: Trying private key: /c/Users/86187/.ssh/id_dsa
+debug1: Trying private key: /c/Users/86187/.ssh/id_ecdsa
+debug1: Trying private key: /c/Users/86187/.ssh/id_ecdsa_sk
+debug1: Trying private key: /c/Users/86187/.ssh/id_ed25519
+debug1: Trying private key: /c/Users/86187/.ssh/id_ed25519_sk
+debug1: Trying private key: /c/Users/86187/.ssh/id_xmss
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+试了一通之后还是不行，最后发现config配置文件 搞成 config.txt了
+ssh-add -l #命令查看密钥列表，好像没有用耶，好像是没有启用代理，有时间再研究吧！
