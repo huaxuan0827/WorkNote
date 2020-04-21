@@ -59,10 +59,10 @@ int l0006_netcom_iscanconnet(const char *szip, unsigned short usport)
 我们知道，tcp客户端要与服务端通信，必须先建立连接，即调用connect函数完成三次握手，而默认情况下connect是阻塞方式的，也就是说调用connect函数会发生阻塞，超时时间可能在75s至几分钟之间。当然同一主机除外，同一主机上调用connect通常会立即成功。
 
 为避免长时间的connect阻塞，可以使用如下非阻塞connect方式来处理：
-一、 创建socket,返回套接口描述符
-二、 调用fcntl把套接口描述符设置成非阻塞
-三、 调用connect开始建立连接
-四、 判断连接是否成功建立                
+一、 创建socket,返回套接口描述符 
+二、 调用fcntl把套接口描述符设置成非阻塞 
+三、 调用connect开始建立连接   
+四、 判断连接是否成功建立                  
         A: 如果connect返回0,表示连接成功(服务器和客户端在同一台机器上时就有可能发生这种情况)                
         B: 调用select来等待连接建立成功完成                                
 	    (Berkeley的实现(和Posix.1g)有两条与select和非阻塞IO相关的规则: 
